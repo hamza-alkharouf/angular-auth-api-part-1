@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg bg-dark text-white">
+  <div class="container-fluid ">
+    <a class="navbar-brand text-white" href="#">Auth</a>
+    <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+      <div class="navbar-nav ">
+        <a class="nav-link active text-white" aria-current="page" routerLink="/">Home</a>
+      </div>
+    </div>
+    <div class="text-end" *ngIf="authenticated">
+      <a routerLink="/login" class="btn btn-outline-light me-2" (click)="logout()" >Logout</a>
+
+    </div>
+    <div class="text-end" *ngIf="!authenticated">
+      <button class="btn btn-outline-light me-2" type="submit" routerLink="/login">login</button>
+      <button class="btn btn-outline-light me-2" type="submit" routerLink="/register">Register</button>
+    </div>
+
+  </div>
+</nav>
